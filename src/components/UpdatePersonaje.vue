@@ -58,8 +58,14 @@ export default {
     serviceserie.getSeries().then((result) => {
       this.series = result;
     });
+    serviceserie.getSerie(this.idserie).then((result) => {
+      this.serieActual = result;
+    });
     servicepersonaje.getPersonajes().then((result) => {
       this.personajes = result;
+    });
+    servicepersonaje.getPersonaje(this.idpersonaje).then((result) => {
+      this.personajeActual = result;
     });
   },
   methods: {
